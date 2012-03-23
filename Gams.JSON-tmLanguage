@@ -1,0 +1,22 @@
+{ "name": "Gams",
+  "scopeName": "source.gms",
+  "fileTypes": ["gms","inc"],
+  "patterns": [
+  	{ 	"match": "(?i)\\b(SCALARS?|EQUATIONS?|MAXIMIZING|MINIMIZING|MODEL|PARAMETERS?|POSITIVE|SETS?|SOLVE|USING|VARIABLES?)\\b",
+  		  "name": "keyword.gms"
+  	},
+    {   "match": "(?i)\\b(ALIAS|DISPLAY|FILE|LOOP|PUT|PUTCLOSE)\\b",
+        "name": "keyword.gms"
+    },
+    {   "match": "(?i)\\$(INCLUDE|(ON|OFF)(DIGIT|EMPTY|LISTING|TEXT))",
+        "captures": {
+              "1": { "name": "constant.numeric.gms" }
+           },
+        "name": "keyword.gms"
+    },
+    {   "match": "^\\*.*$",
+        "name": "comment.gms"
+    }
+  ],
+  "uuid": "aafdcaab-22a9-4ad5-9fe1-94bd7af0567c"
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>gms</string>
+		<string>inc</string>
+	</array>
+	<key>name</key>
+	<string>Gams</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(SCALARS?|EQUATIONS?|MAXIMIZING|MINIMIZING|MODEL|PARAMETERS?|POSITIVE|SETS?|SOLVE|USING|VARIABLES?)\b</string>
+			<key>name</key>
+			<string>keyword.gms</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(ALIAS|DISPLAY|FILE|LOOP|PUT|PUTCLOSE)\b</string>
+			<key>name</key>
+			<string>keyword.gms</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.gms</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?i)\$(INCLUDE|(ON|OFF)(DIGIT|EMPTY|LISTING|TEXT))</string>
+			<key>name</key>
+			<string>keyword.gms</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^\*.*$</string>
+			<key>name</key>
+			<string>comment.gms</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.gms</string>
+	<key>uuid</key>
+	<string>aafdcaab-22a9-4ad5-9fe1-94bd7af0567c</string>
+</dict>
+</plist>
