@@ -2,20 +2,32 @@
   "scopeName": "source.gms",
   "fileTypes": ["gms","inc"],
   "patterns": [
-  	{ 	"match": "(?i)\\b(SCALARS?|EQUATIONS?|MAXIMIZING|MINIMIZING|MODEL|PARAMETERS?|POSITIVE|SETS?|SOLVE|USING|VARIABLES?)\\b",
-  		  "name": "keyword.gms"
+  	{ 	"match": "(?i)\\b(ABORT|ACRONYMS?|ALIAS|ALL|AND|ASSIGN|BINARY|CARD|DISPLAY|EPS|EQ|EQUATIONS?|GE|GT|INF|INTEGER|LE|LOOP|LT|MAXIMIZING|MINIMIZING|MODELS?|NA|NE|NEGATIVE|NOT|OPTION|OPTIONS|OR|ORD|PARAMETERS?|POSITIVE|PROD|SCALARS?|SETS?|SMAX|SMIN|SOS1|SOS2|SUM|SYSTEM|TABLE|USING|VARIABLES?|XOR|YES|REPEAT|UNTIL|WHILE|IF|THEN|ELSE|SEMICONT|SEMIINT|FILES?|PUT|PUTPAGE|PUTTL|PUTCLOSE|FREE|NO|SOLVE|FOR|ELSEIF)\\b",
+  		  "name": "keyword.control.gms",
+        "comment": "GAMS control keywords"
   	},
-    {   "match": "(?i)\\b(ALIAS|DISPLAY|FILE|LOOP|PUT|PUTCLOSE)\\b",
-        "name": "keyword.gms"
+    {   "match": "(?i)\\b(ABS|ARCTAN|CEIL|COS|ERROR|EXP|FLOOR|LOG|LOG10|MAP|MAPVAL|MAX|MIN|MOD|NORMAL|POWER|ROUND|SIGN|SIN|SQR|SQRT|TRUNC|UNIFORM)\\b",
+        "name": "keyword.operator.gms",
+        "comment": "GAMS mathematical keywords"
     },
-    {   "match": "(?i)\\$(INCLUDE|(ON|OFF)(DIGIT|EMPTY|LISTING|TEXT))",
-        "captures": {
-              "1": { "name": "constant.numeric.gms" }
-           },
-        "name": "keyword.gms"
+    {   "match": "(?i)\\b(LO|UP|FX|SCALE|PRIOR|PC|PS|PW|TM|BM|CASE|DATE|IFILE|OFILE|PAGE|RDATE|RFILE|RTIME|SFILE|TIME|TITLE|TS|TL|TE|TF|LJ|NJ|SJ|TJ|LW|NW|SW|TW|ND|NR|NZ|CC|HDCC|TLCC|LL|HDLL|TLLL|LP|WS)\\b",
+        "name": "keyword.gms",
+        "comment": "GAMS suffix keywords"
+    },
+    {   "begin": "'",
+        "end": "'",
+        "patterns": [ {"name": "constant.character.escape.gms", "match": "\\."}
+        ],
+        "name": "string.quoted.gms",
+        "comment": "string"
+    },
+    {   "match": "(?i)\\$(ABORT|BATINCLUDE|CALL|CLEAR|COMMENT|DEFINTION|DOLLAR|DOUBLE|ECHO|EJECT|EOLCOM|ERROR|EXIT|GOTO|HIDDEN|IF|INCLUDE|INLINECOM|KILL|LABEL|LIBINCLUDE|LINES|LOG|MAXCOL|MINCOL|(ON|OFF)DIGIT|(ON|OFF)DOLLAR|(ON|OFF)EMPTY|(ON|OFF)END|(ON|OFF)EOLCOM|(ON|OFF)EPS|(ON|OFF)GLOBAL|(ON|OFF)INCLUDE|(ON|OFF)INLINE|(ON|OFF)LISTING|(ON|OFF)MARGIN|OFFMULTI|(ON|OFF)NESTCOM|(ON|OFF)SYMLIST|(ON|OFF)SYMXREF|(ON|OFF)TEXT|(ON|OFF)UELLIST|(ON|OFF)UELXREF|(ON|OFF)WARNING|(ON|OFF)UPPER|PHANTOM|SETGLOBAL|SHIFT|SHOW|SINGLE|STARS|STITLE|SYSINCLUDE|TITLE|USE205|USE225|USE999)\\b",
+        "name": "keyword.other.gms",
+        "comment": "GAMS preprocessor commands"
     },
     {   "match": "^\\*.*$",
-        "name": "comment.gms"
+        "name": "comment.gms",
+        "comment": "comment"
     }
   ],
   "uuid": "aafdcaab-22a9-4ad5-9fe1-94bd7af0567c"

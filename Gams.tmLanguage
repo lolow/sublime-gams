@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
@@ -12,32 +12,59 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>comment</key>
+			<string>GAMS control keywords</string>
 			<key>match</key>
-			<string>(?i)\b(SCALARS?|EQUATIONS?|MAXIMIZING|MINIMIZING|MODEL|PARAMETERS?|POSITIVE|SETS?|SOLVE|USING|VARIABLES?)\b</string>
+			<string>(?i)\b(ABORT|ACRONYMS?|ALIAS|ALL|AND|ASSIGN|BINARY|CARD|DISPLAY|EPS|EQ|EQUATIONS?|GE|GT|INF|INTEGER|LE|LOOP|LT|MAXIMIZING|MINIMIZING|MODELS?|NA|NE|NEGATIVE|NOT|OPTION|OPTIONS|OR|ORD|PARAMETERS?|POSITIVE|PROD|SCALARS?|SETS?|SMAX|SMIN|SOS1|SOS2|SUM|SYSTEM|TABLE|USING|VARIABLES?|XOR|YES|REPEAT|UNTIL|WHILE|IF|THEN|ELSE|SEMICONT|SEMIINT|FILES?|PUT|PUTPAGE|PUTTL|PUTCLOSE|FREE|NO|SOLVE|FOR|ELSEIF)\b</string>
+			<key>name</key>
+			<string>keyword.control.gms</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>GAMS mathematical keywords</string>
+			<key>match</key>
+			<string>(?i)\b(ABS|ARCTAN|CEIL|COS|ERROR|EXP|FLOOR|LOG|LOG10|MAP|MAPVAL|MAX|MIN|MOD|NORMAL|POWER|ROUND|SIGN|SIN|SQR|SQRT|TRUNC|UNIFORM)\b</string>
+			<key>name</key>
+			<string>keyword.operator.gms</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>GAMS suffix keywords</string>
+			<key>match</key>
+			<string>(?i)\b(LO|UP|FX|SCALE|PRIOR|PC|PS|PW|TM|BM|CASE|DATE|IFILE|OFILE|PAGE|RDATE|RFILE|RTIME|SFILE|TIME|TITLE|TS|TL|TE|TF|LJ|NJ|SJ|TJ|LW|NW|SW|TW|ND|NR|NZ|CC|HDCC|TLCC|LL|HDLL|TLLL|LP|WS)\b</string>
 			<key>name</key>
 			<string>keyword.gms</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>(?i)\b(ALIAS|DISPLAY|FILE|LOOP|PUT|PUTCLOSE)\b</string>
+			<key>begin</key>
+			<string>'</string>
+			<key>comment</key>
+			<string>string</string>
+			<key>end</key>
+			<string>'</string>
 			<key>name</key>
-			<string>keyword.gms</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
+			<string>string.quoted.gms</string>
+			<key>patterns</key>
+			<array>
 				<dict>
+					<key>match</key>
+					<string>\.</string>
 					<key>name</key>
-					<string>constant.numeric.gms</string>
+					<string>constant.character.escape.gms</string>
 				</dict>
-			</dict>
-			<key>match</key>
-			<string>(?i)\$(INCLUDE|(ON|OFF)(DIGIT|EMPTY|LISTING|TEXT))</string>
-			<key>name</key>
-			<string>keyword.gms</string>
+			</array>
 		</dict>
 		<dict>
+			<key>comment</key>
+			<string>GAMS preprocessor commands</string>
+			<key>match</key>
+			<string>(?i)\$(ABORT|BATINCLUDE|CALL|CLEAR|COMMENT|DEFINTION|DOLLAR|DOUBLE|ECHO|EJECT|EOLCOM|ERROR|EXIT|GOTO|HIDDEN|IF|INCLUDE|INLINECOM|KILL|LABEL|LIBINCLUDE|LINES|LOG|MAXCOL|MINCOL|(ON|OFF)DIGIT|(ON|OFF)DOLLAR|(ON|OFF)EMPTY|(ON|OFF)END|(ON|OFF)EOLCOM|(ON|OFF)EPS|(ON|OFF)GLOBAL|(ON|OFF)INCLUDE|(ON|OFF)INLINE|(ON|OFF)LISTING|(ON|OFF)MARGIN|OFFMULTI|(ON|OFF)NESTCOM|(ON|OFF)SYMLIST|(ON|OFF)SYMXREF|(ON|OFF)TEXT|(ON|OFF)UELLIST|(ON|OFF)UELXREF|(ON|OFF)WARNING|(ON|OFF)UPPER|PHANTOM|SETGLOBAL|SHIFT|SHOW|SINGLE|STARS|STITLE|SYSINCLUDE|TITLE|USE205|USE225|USE999)\b</string>
+			<key>name</key>
+			<string>keyword.other.gms</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>comment</string>
 			<key>match</key>
 			<string>^\*.*$</string>
 			<key>name</key>
