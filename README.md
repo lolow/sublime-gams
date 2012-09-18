@@ -8,7 +8,7 @@ Provides syntax highlighting for `.gms` and `.inc` files
 
 **With Git:** Clone the repository in your Sublime Text "Packages" directory:
 
-    git clone git@github.com:lolow/sublime-gams.git GAMS
+    git clone git://github.com/lolow/sublime-gams.git GAMS
 
 The "Packages" directory is located at:
 
