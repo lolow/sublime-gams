@@ -1,0 +1,11 @@
+{ "name": "Gams Listing",
+  "scopeName": "source.lst",
+  "fileTypes": ["lst"],
+  "patterns": [
+    {   "match": "^\\*\\*\\*\\*.*$\n?",
+        "name": "support.function.lst",
+        "comment": "GAMS errors"
+    }
+  ],
+  "uuid": "aafdcaab-22a9-4ad5-9fe1-94bd7af0567c"
+}
