@@ -4,7 +4,7 @@ Provides syntax highlighting for `.gms` and `.inc` files
 
 ## Installation
 
-**Without Git:** Download the latest source zip from [github](https://github.com/lolow/sublime-gams/tarball/master) and extract the files to your Sublime Text "Packages" directory, into a new directory named `GAMS`.
+**Without Git:** Download the latest source zip from [github](https://github.com/lolow/sublime-gams/tarball/master) and extract the files to your Sublime Text "Packages" directory, into a new directory named *GAMS*.
 
 **With Git:** Clone the repository in your Sublime Text "Packages" directory:
 
@@ -26,6 +26,14 @@ You can access it through the menu in `Preferences` > `Browse Packages...`
 The General Algebraic Modeling System (GAMS) is a high-level modeling system for mathematical programming and optimization. It consists of a language compiler and a stable of integrated high-performance solvers. GAMS is tailored for complex, large scale modeling applications, and allows you to build large maintainable models that can be adapted quickly to new situations.
 
 GAMS is the property of GAMS Software GmbH (http://www.gams.com).
+
+## Features
+
+You need _gams_ or _gams.exe_ in your PATH. Please update your environment variable PATH.
+
+To launch gams, open your _file.gms_ and type CTRL+B (Build).
+
+In the listing, _file.lst_, type CTRL+R (Goto Symbol) to list and jump to the error statements.
 
 ## Support
 
