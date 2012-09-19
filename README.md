@@ -1,4 +1,4 @@
-# GAMS syntax package for Sublime Text 2
+# GAMS package for Sublime Text 2
 
 Provides syntax highlighting for `.gms` and `.inc` files
 
@@ -31,9 +31,11 @@ GAMS is the property of GAMS Software GmbH (http://www.gams.com).
 
 You need _gams_ or _gams.exe_ in your PATH. Please update your environment variable PATH.
 
-To launch gams, open your _file.gms_ and type CTRL+B (Build).
+To launch gams, open your _file.gms_ and type **CTRL+B** (Build).
 
-In the listing, _file.lst_, type CTRL+R (Goto Symbol) to list and jump to the error statements.
+Type **ALT+L** to switch between the code _file.gms_ and the listing _file.lst_.
+
+In the GAMS listing, _file.lst_, type **CTRL+R** (Goto Symbol) to list and jump to the error statements.
 
 ## Support
 
