@@ -12,10 +12,126 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>begin</key>
+			<string>(?i)\$ONTEXT</string>
+			<key>comment</key>
+			<string>multiline comments</string>
+			<key>contentName</key>
+			<string>comment.block.documentation.gms</string>
+			<key>end</key>
+			<string>(?i)\$OFFTEXT</string>
+			<key>name</key>
+			<string>constant.character.gms</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Starred GAMS comments</string>
+			<key>match</key>
+			<string>^\*.*$
+?</string>
+			<key>name</key>
+			<string>comment.gms</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.gms</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>end of line comments</string>
+			<key>match</key>
+			<string>(?:^[ 	]+)?(#).*$
+?</string>
+			<key>name</key>
+			<string>comment.line.number-sign.gms</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?i)\b(SETS?)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.gms</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>set definition</string>
+			<key>end</key>
+			<string>;</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>%(\w+%|\d+)</string>
+					<key>name</key>
+					<string>entity.name.class.gms</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?:^[ 	]+)?(#).*$
+?</string>
+					<key>name</key>
+					<string>comment.line.number-sign.gms</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^\*.*$
+?</string>
+					<key>name</key>
+					<string>comment.gms</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?i)\b(SCALARS?)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.gms</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>scalar definition</string>
+			<key>end</key>
+			<string>;</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>%(\w+%|\d+)</string>
+					<key>name</key>
+					<string>entity.name.class.gms</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?:^[ 	]+)?(#).*$
+?</string>
+					<key>name</key>
+					<string>comment.line.number-sign.gms</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^\*.*$
+?</string>
+					<key>name</key>
+					<string>comment.gms</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>GAMS control keywords</string>
 			<key>match</key>
-			<string>(?i)\b(ABORT|ACRONYMS?|ALIAS|ALL|AND|ASSIGN|BINARY|CARD|DISPLAY|EPS|EQ|EQUATIONS?|GE|GT|INF|INTEGER|LE|LOOP|LT|MAXIMIZING|MINIMIZING|MODELS?|NA|NE|NEGATIVE|NOT|OPTION|OPTIONS|OR|ORD|PARAMETERS?|POSITIVE|PROD|SCALARS?|SETS?|SMAX|SMIN|SOS1|SOS2|SUM|SYSTEM|TABLE|USING|VARIABLES?|XOR|YES|REPEAT|UNTIL|WHILE|IF|THEN|ELSE|SEMICONT|SEMIINT|FILES?|PUT|PUTPAGE|PUTTL|PUTCLOSE|FREE|NO|SOLVE|FOR|ELSEIF)\b</string>
+			<string>(?i)\b(ABORT|ACRONYMS?|ALIAS|ALL|AND|ASSIGN|BINARY|CARD|DISPLAY|EPS|EQ|EQUATIONS?|GE|GT|INF|INTEGER|LE|LOOP|LT|MAXIMIZING|MINIMIZING|MODELS?|NA|NE|NEGATIVE|NOT|OPTION|OPTIONS|OR|ORD|PARAMETERS?|POSITIVE|PROD|SMAX|SMIN|SOS1|SOS2|SUM|SYSTEM|TABLE|USING|VARIABLES?|XOR|YES|REPEAT|UNTIL|WHILE|IF|THEN|ELSE|SEMICONT|SEMIINT|FILES?|PUT|PUTPAGE|PUTTL|PUTCLOSE|FREE|NO|SOLVE|FOR|ELSEIF)\b</string>
 			<key>name</key>
 			<string>keyword.control.gms</string>
 		</dict>
@@ -69,44 +185,6 @@
 			<string>(?i)\$(ABORT|BATINCLUDE|CALL|CLEAR|CLEARERRORS?|COMMENT|COMPRESS|DECOMPRESS|DEFINTION|DOLLAR|DOUBLE|DROP|DROP(ENV|GLOBAL|LOCAL)|ECHON?|EJECT|ELSE|ELSE(IF|IFE|IFI)|ENCRYPT|ENDIF|EOLCOM|ERROR|ESCAPE|EVAL|EVAL(GLOBAL|LOCAL)|EXIT|EXPOSE|FUNCLIBIN|GOTO|GDX(IN|OUT)|HIDDEN|HIDDENCALL|HIDE|IF|IF(E|I|THEN|THENE|THENI)|INCLUDE|INLINECOM|KILL|LABEL|LIBINCLUDE|LINES|LOAD|LOAD(DC|DCM|DCR|M|R)|LOG|MACRO|(MIN|MAX)COL|MAXGOTO|(ON|OFF)DELIM|(ON|OFF)DIGIT|(ON|OFF)DOLLAR|(ON|OFF)DOTL|(ON|OFF)ECHO|(ON|OFF)EMBEDDED|(ON|OFF)EMPTY|(ON|OFF)END|(ON|OFF)EOLCOM|(ON|OFF)EPS|(ON|OFF)EXPAND|(ON|OFF)GLOBAL|(ON|OFF)INCLUDE|(ON|OFF)INLINE|(ON|OFF)LISTING|(ON|OFF)LOCAL|(ON|OFF)LOG|(ON|OFF)MACRO|(ON|OFF)MARGIN|(ON|OFF)MULTI|(ON|OFF)NESTCOM|(ON|OFF)PUT|(ON|OFF)RECURSE|(ON|OFF)SYMLIST|(ON|OFF)SYMXREF|(ON|OFF)UELLIST|(ON|OFF)UELXREF|(ON|OFF)UNDF|(ON|OFF)VERBATIM|(ON|OFF)WARNING|(ON|OFF)UPPER|PHANTOM|PREFIXPATH|PROTECT|PURGE|REMARK|SET|SET(ARGS|COMPS|DDLIST|ENV|GLOBAL|LOCAL|NAMES)|SHIFT|SHOW|SINGLE|STARS|STITLE|STOP|SYSINCLUDE|TERMINATE|TITLE|UNLOAD|USE205|USE225|USE999|VERSION|WARNING)\b</string>
 			<key>name</key>
 			<string>keyword.other.special-method.gms</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.gms</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>end of line comments</string>
-			<key>match</key>
-			<string>(?:^[ 	]+)?(#).*$
-?</string>
-			<key>name</key>
-			<string>comment.line.number-sign.gms</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(?i)\$ONTEXT</string>
-			<key>comment</key>
-			<string>multiline comments</string>
-			<key>contentName</key>
-			<string>comment.block.documentation.gms</string>
-			<key>end</key>
-			<string>(?i)\$OFFTEXT</string>
-			<key>name</key>
-			<string>constant.character.gms</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Starred GAMS comments</string>
-			<key>match</key>
-			<string>^\*.*$
-?</string>
-			<key>name</key>
-			<string>comment.gms</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
