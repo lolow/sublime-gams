@@ -117,7 +117,7 @@
 		<key>equation</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(EQUATIONS?)</string>
+			<string>(?i)^\s*\b(EQUATIONS?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -141,7 +141,7 @@
 		<key>equationdef</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(.*)(\.\.)\s+</string>
+			<string>^\s*\b(.*)(\.\.)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -290,7 +290,7 @@
 		<key>parameter</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(PARAMETERS?)</string>
+			<string>(?i)^\s*\b(PARAMETERS?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -321,7 +321,7 @@
 		<key>scalar</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(SCALARS?)</string>
+			<string>(?i)^\s*\b(SCALARS?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -373,7 +373,7 @@
 		<key>set</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(SETS?)</string>
+			<string>(?i)^\s*\b(SETS?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -438,7 +438,7 @@
 		<key>table</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(TABLES?)</string>
+			<string>(?i)^\s*\b(TABLES?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -462,7 +462,7 @@
 		<key>variable</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)(\b(VARIABLES?)|(\bPOSITIVE\s+VARIABLES?))</string>
+			<string>(?i)^\s*(\b(VARIABLES?)|(\bPOSITIVE\s+VARIABLES?))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>

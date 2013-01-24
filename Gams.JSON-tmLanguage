@@ -68,7 +68,7 @@
     },
     "set": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(SETS?)",
+      "begin": "(?i)^\\s*\\b(SETS?)",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -83,7 +83,7 @@
     },
     "parameter": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(PARAMETERS?)",
+      "begin": "(?i)^\\s*\\b(PARAMETERS?)",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -98,7 +98,7 @@
     },
     "scalar": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(SCALARS?)",
+      "begin": "(?i)^\\s*\\b(SCALARS?)",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -131,7 +131,7 @@
     },
     "table": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(TABLES?)",
+      "begin": "(?i)^\\s*\\b(TABLES?)",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -146,7 +146,7 @@
     },
     "variable": {
       "name": "meta.function.gms",
-      "begin": "(?i)(\\b(VARIABLES?)|(\\bPOSITIVE\\s+VARIABLES?))",
+      "begin": "(?i)^\\s*(\\b(VARIABLES?)|(\\bPOSITIVE\\s+VARIABLES?))",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -161,7 +161,7 @@
     },
     "equation": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(EQUATIONS?)",
+      "begin": "(?i)^\\s*\\b(EQUATIONS?)",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -176,7 +176,7 @@
     },
     "equationdef": {
       "name": "meta.function.gms",
-      "begin": "\\b(.*)(\\.\\.)\\s+",
+      "begin": "^\\s*\\b(.*)(\\.\\.)\\s+",
       "beginCaptures": {
         "1": {
           "name": "entity.name.function.gms"
