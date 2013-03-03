@@ -117,10 +117,10 @@
 		<key>equation</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(EQUATIONS?)\s+</string>
+			<string>(?i)(^|;)\s*\b(EQUATIONS?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.gms</string>
@@ -141,15 +141,15 @@
 		<key>equationdef</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(.*)(\.\.)\s+</string>
+			<string>^(^|;)\s*\b(.*)(\.\.)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.function.gms</string>
 				</dict>
-				<key>2</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.name.function.gms</string>
@@ -290,10 +290,10 @@
 		<key>parameter</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(PARAMETERS?)\s+</string>
+			<string>(?i)(^|;)\s*\b(PARAMETERS?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.gms</string>
@@ -321,10 +321,10 @@
 		<key>scalar</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(SCALARS?)\s+</string>
+			<string>(?i)(^|;)\s*\b(SCALARS?)</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.gms</string>
@@ -438,10 +438,10 @@
 		<key>table</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(TABLES?)\s+</string>
+			<string>(?i)(^|;)\s*\b(TABLES?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.gms</string>
@@ -462,10 +462,10 @@
 		<key>variable</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)(\b(VARIABLES?)|(\bPOSITIVE\s+VARIABLES?))\s+</string>
+			<string>(?i)(^|;)\s*(\b(VARIABLES?)|(\bPOSITIVE\s+VARIABLES?))\s+</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.gms</string>

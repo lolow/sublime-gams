@@ -83,9 +83,9 @@
     },
     "parameter": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(PARAMETERS?)\\s+",
+      "begin": "(?i)(^|;)\\s*\\b(PARAMETERS?)\\s+",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "keyword.control.gms"
         }
       },
@@ -98,9 +98,9 @@
     },
     "scalar": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(SCALARS?)\\s+",
+      "begin": "(?i)(^|;)\\s*\\b(SCALARS?)",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "keyword.control.gms"
         }
       },
@@ -131,9 +131,9 @@
     },
     "table": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(TABLES?)\\s+",
+      "begin": "(?i)(^|;)\\s*\\b(TABLES?)\\s+",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "keyword.control.gms"
         }
       },
@@ -146,9 +146,9 @@
     },
     "variable": {
       "name": "meta.function.gms",
-      "begin": "(?i)(\\b(VARIABLES?)|(\\bPOSITIVE\\s+VARIABLES?))\\s+",
+      "begin": "(?i)(^|;)\\s*(\\b(VARIABLES?)|(\\bPOSITIVE\\s+VARIABLES?))\\s+",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "keyword.control.gms"
         }
       },
@@ -161,9 +161,9 @@
     },
     "equation": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(EQUATIONS?)\\s+",
+      "begin": "(?i)(^|;)\\s*\\b(EQUATIONS?)\\s+",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "keyword.control.gms"
         }
       },
@@ -176,12 +176,12 @@
     },
     "equationdef": {
       "name": "meta.function.gms",
-      "begin": "\\b(.*)(\\.\\.)\\s+",
+      "begin": "^(^|;)\\s*\\b(.*)(\\.\\.)\\s+",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "entity.name.function.gms"
         },
-        "2": {
+        "3": {
           "name": "punctuation.name.function.gms"
         }
       },
