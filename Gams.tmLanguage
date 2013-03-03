@@ -117,7 +117,7 @@
 		<key>equation</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(EQUATIONS?)</string>
+			<string>(?i)\b(EQUATIONS?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -290,7 +290,7 @@
 		<key>parameter</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(PARAMETERS?)</string>
+			<string>(?i)\b(PARAMETERS?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -321,7 +321,7 @@
 		<key>scalar</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(SCALARS?)</string>
+			<string>(?i)\b(SCALARS?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -373,10 +373,10 @@
 		<key>set</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(SETS?)</string>
+			<string>(?i)(^|;)\s*\b(SETS?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.gms</string>
@@ -438,7 +438,7 @@
 		<key>table</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)\b(TABLES?)</string>
+			<string>(?i)\b(TABLES?)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -462,7 +462,7 @@
 		<key>variable</key>
 		<dict>
 			<key>begin</key>
-			<string>(?i)(\b(VARIABLES?)|(\bPOSITIVE\s+VARIABLES?))</string>
+			<string>(?i)(\b(VARIABLES?)|(\bPOSITIVE\s+VARIABLES?))\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>

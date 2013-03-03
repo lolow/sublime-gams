@@ -68,9 +68,9 @@
     },
     "set": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(SETS?)",
+      "begin": "(?i)(^|;)\\s*\\b(SETS?)\\s+",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "keyword.control.gms"
         }
       },
@@ -83,7 +83,7 @@
     },
     "parameter": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(PARAMETERS?)",
+      "begin": "(?i)\\b(PARAMETERS?)\\s+",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -98,7 +98,7 @@
     },
     "scalar": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(SCALARS?)",
+      "begin": "(?i)\\b(SCALARS?)\\s+",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -131,7 +131,7 @@
     },
     "table": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(TABLES?)",
+      "begin": "(?i)\\b(TABLES?)\\s+",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -146,7 +146,7 @@
     },
     "variable": {
       "name": "meta.function.gms",
-      "begin": "(?i)(\\b(VARIABLES?)|(\\bPOSITIVE\\s+VARIABLES?))",
+      "begin": "(?i)(\\b(VARIABLES?)|(\\bPOSITIVE\\s+VARIABLES?))\\s+",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -161,7 +161,7 @@
     },
     "equation": {
       "name": "meta.function.gms",
-      "begin": "(?i)\\b(EQUATIONS?)",
+      "begin": "(?i)\\b(EQUATIONS?)\\s+",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.gms"
@@ -222,7 +222,7 @@
     },
     "preprocess": {
       "name": "keyword.other.special-method.gms",
-      "match": "(?i)\\$(ABORT|BATINCLUDE|CALL|CLEAR|CLEARERRORS?|COMMENT|COMPRESS|DECOMPRESS|DEFINTION|DOLLAR|DOUBLE|DROP|DROP(ENV|GLOBAL|LOCAL)|ECHON?|EJECT|ELSE|ELSE(IF|IFE|IFI)|ENCRYPT|ENDIF|EOLCOM|ERROR|ESCAPE|EVAL|EVAL(GLOBAL|LOCAL)|EXIT|EXPOSE|FUNCLIBIN|GOTO|GDX(IN|OUT)|HIDDEN|HIDDENCALL|HIDE|IF|IF(E|I|THEN|THENE|THENI)|INCLUDE|INLINECOM|KILL|LABEL|LIBINCLUDE|LINES|LOAD|LOAD(DC|DCM|DCR|M|R)|LOG|MACRO|(MIN|MAX)COL|MAXGOTO|(ON|OFF)DELIM|(ON|OFF)DIGIT|(ON|OFF)DOLLAR|(ON|OFF)DOTL|(ON|OFF)ECHO|(ON|OFF)EMBEDDED|(ON|OFF)EMPTY|(ON|OFF)END|(ON|OFF)EOLCOM|(ON|OFF)EPS|(ON|OFF)EXPAND|(ON|OFF)GLOBAL|(ON|OFF)INCLUDE|(ON|OFF)INLINE|(ON|OFF)LISTING|(ON|OFF)LOCAL|(ON|OFF)LOG|(ON|OFF)MACRO|(ON|OFF)MARGIN|(ON|OFF)MULTI|(ON|OFF)NESTCOM|(ON|OFF)PUT|(ON|OFF)RECURSE|(ON|OFF)SYMLIST|(ON|OFF)SYMXREF|(ON|OFF)UELLIST|(ON|OFF)UELXREF|(ON|OFF)UNDF|(ON|OFF)VERBATIM|(ON|OFF)WARNING|(ON|OFF)UPPER|PHANTOM|PREFIXPATH|PROTECT|PURGE|REMARK|SET|SET(ARGS|COMPS|DDLIST|ENV|GLOBAL|LOCAL|NAMES)|SHIFT|SHOW|SINGLE|STARS|STITLE|STOP|SYSINCLUDE|TERMINATE|TITLE|UNLOAD|USE205|USE225|USE999|VERSION|WARNING)\\b"        
+      "match": "(?i)\\$(ABORT|BATINCLUDE|CALL|CLEAR|CLEARERRORS?|COMMENT|COMPRESS|DECOMPRESS|DEFINTION|DOLLAR|DOUBLE|DROP|DROP(ENV|GLOBAL|LOCAL)|ECHON?|EJECT|ELSE|ELSE(IF|IFE|IFI)|ENCRYPT|ENDIF|EOLCOM|ERROR|ESCAPE|EVAL|EVAL(GLOBAL|LOCAL)|EXIT|EXPOSE|FUNCLIBIN|GOTO|GDX(IN|OUT)|HIDDEN|HIDDENCALL|HIDE|IF|IF(E|I|THEN|THENE|THENI)|INCLUDE|INLINECOM|KILL|LABEL|LIBINCLUDE|LINES|LOAD|LOAD(DC|DCM|DCR|M|R)|LOG|MACRO|(MIN|MAX)COL|MAXGOTO|(ON|OFF)DELIM|(ON|OFF)DIGIT|(ON|OFF)DOLLAR|(ON|OFF)DOTL|(ON|OFF)ECHO|(ON|OFF)EMBEDDED|(ON|OFF)EMPTY|(ON|OFF)END|(ON|OFF)EOLCOM|(ON|OFF)EPS|(ON|OFF)EXPAND|(ON|OFF)GLOBAL|(ON|OFF)INCLUDE|(ON|OFF)INLINE|(ON|OFF)LISTING|(ON|OFF)LOCAL|(ON|OFF)LOG|(ON|OFF)MACRO|(ON|OFF)MARGIN|(ON|OFF)MULTI|(ON|OFF)NESTCOM|(ON|OFF)PUT|(ON|OFF)RECURSE|(ON|OFF)SYMLIST|(ON|OFF)SYMXREF|(ON|OFF)UELLIST|(ON|OFF)UELXREF|(ON|OFF)UNDF|(ON|OFF)VERBATIM|(ON|OFF)WARNING|(ON|OFF)UPPER|PHANTOM|PREFIXPATH|PROTECT|PURGE|REMARK|SET|SET(ARGS|COMPS|DDLIST|ENV|GLOBAL|LOCAL|NAMES)|SHIFT|SHOW|SINGLE|STARS|STITLE|STOP|SYSINCLUDE|TERMINATE|TITLE|UNLOAD|USE205|USE225|USE999|VERSION|WARNING)\\b"
     },
     "argument": {
       "name": "entity.name.class.gms",
