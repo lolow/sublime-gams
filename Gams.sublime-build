@@ -9,13 +9,13 @@
 	"osx":
 		{
 			"path": "",
-			"cmd": ["gams", "$file","lo=3"],
+			"cmd": ["gams", "$file","lo=3","ERRMSG=1"],
 			"file_regex": "^(...*?):([0-9]*):?([0-9]*)"
 		},
 	"linux":
 		{
 			"path": "",
-			"cmd": ["gams", "$file","lo=3"],
+			"cmd": ["gams", "$file","lo=3","ERRMSG=1"],
 			"file_regex": "^(...*?):([0-9]*):?([0-9]*)"
 		}
 }

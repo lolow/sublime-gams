@@ -1,8 +1,10 @@
 # GAMS package for Sublime Text 2
 
-Provides syntax highlighting for `.gms` and `.inc` files
+Provides syntax highlighting for `.gms` and `.inc` files and shortcuts for running GAMS models.
 
 ## Installation
+
+**Using Sublime Package Control** (recommended): If you have installed [Sublime Package Control](http://wbond.net/sublime_packages/package_control), you can easily install the GAMS Language package via the `Package Control: Install Package` menu item (shortcut: **CTRL+SHIFT+P**). Search for `GAMS Language` in the list.
 
 **Without Git:** Download the latest source zip from [github](https://github.com/lolow/sublime-gams/tarball/master) and extract the files to your Sublime Text "Packages" directory, into a new directory named *GAMS*.
 
