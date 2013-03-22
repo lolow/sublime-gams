@@ -45,13 +45,13 @@ and line comments are started by a star **\***.
 This package also adds the comment highlighting for end of line **#** and **//**,
 and the inline comments delineated by curly brackets: **{** **}** or in C-style with **/\*\* \*\*/**.
 
-In order to GAMS to process these new types of comments,
+In order to GAMS to process these new comment conventions,
 you need to add in your code some of these commands:
 
 	$eolcom //
 	$eolcom #
 	$inlinecom {}
-	inlinecom /* */
+	$inlinecom /* */
 
 ## Support
 
