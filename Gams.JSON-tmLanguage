@@ -8,6 +8,12 @@
                     "include": "#blockcomment"
                 },
                 {
+                    "include": "#blockcommentcurly"
+                },
+                {
+                    "include": "#blockcommentc"
+                },
+                {
                     "include": "#linecomment"
                 },
                 {
@@ -36,9 +42,21 @@
       "end": "(?i)\\$OFFTEXT",
       "contentName": "comment.block.documentation.gms"      
     },
+    "blockcommentc": {
+      "name": "comment.slashstar.gms",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "contentName": "comment.block.documentation.gms"      
+    },
+    "blockcommentcurly": {
+      "name": "comment.curly.gms",
+      "begin": "{",
+      "end": "}",
+      "contentName": "comment.block.documentation.gms"      
+    },
     "linecomment": {
       "name": "comment.line.sharp.gms",
-      "match": "(#)(?!\\[\\[).*$\\n?",
+      "match": "(#|//)(?!\\[\\[).*$\\n?",
       "captures": { "1": { "name": "punctuation.definition.comment.gms" } }
     },
     "fulllinecomment": {

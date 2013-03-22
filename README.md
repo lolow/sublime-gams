@@ -37,6 +37,22 @@ Type **ALT+L** to switch between the code _file.gms_ and the listing _file.lst_.
 
 In the GAMS listing, _file.lst_, type **CTRL+R** (Goto Symbol) to list and jump to the error statements.
 
+## GAMS Comments
+
+In GAMS, by default, block comments are delineated by **$ONTEXT**/**$OFFTEXT**, 
+and line comments are started by a star **\***.
+
+This package also adds the comment highlighting for end of line **#** and **//**,
+and the inline comments delineated by curly brackets: **{** **}** or in C-style with **/\*\* \*\*/**.
+
+In order to GAMS to process these new types of comments,
+you need to add in your code some of these commands:
+
+	$eolcom //
+	$eolcom #
+	$inlinecom {}
+	inlinecom /* */
+
 ## Support
 
 Any remarks, suggestion about the syntax highlighting have to be adressed to the author `Laurent Drouet`.

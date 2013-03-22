@@ -80,6 +80,28 @@
 			<key>name</key>
 			<string>keyword.control.gms</string>
 		</dict>
+		<key>blockcommentc</key>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>contentName</key>
+			<string>comment.block.documentation.gms</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.slashstar.gms</string>
+		</dict>
+		<key>blockcommentcurly</key>
+		<dict>
+			<key>begin</key>
+			<string>{</string>
+			<key>contentName</key>
+			<string>comment.block.documentation.gms</string>
+			<key>end</key>
+			<string>}</string>
+			<key>name</key>
+			<string>comment.curly.gms</string>
+		</dict>
 		<key>doublequotestring</key>
 		<dict>
 			<key>begin</key>
@@ -216,6 +238,14 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#blockcommentcurly</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#blockcommentc</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#linecomment</string>
 				</dict>
 				<dict>
@@ -262,7 +292,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(#)(?!\[\[).*$\n?</string>
+			<string>(#|//)(?!\[\[).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.sharp.gms</string>
 		</dict>
