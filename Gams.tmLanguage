@@ -162,25 +162,10 @@
 		</dict>
 		<key>equationdef</key>
 		<dict>
-			<key>begin</key>
-			<string>;\s*(.*)(\.\.)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.gms</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.name.function.gms</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>;</string>
+			<key>match</key>
+			<string>\.\.</string>
 			<key>name</key>
-			<string>meta.function.gms</string>
+			<string>keyword.operator.gams</string>
 			<key>patterns</key>
 			<array>
 				<dict>
