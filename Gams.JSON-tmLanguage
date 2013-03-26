@@ -194,7 +194,7 @@
     },
     "equationdef": {
       "name": "meta.function.gms",
-      "begin": "^(^|;)\\s*\\b(.*)(\\.\\.)\\s+",
+      "begin": ";\\s*(.*)(\\.\\.)\\s+",
       "beginCaptures": {
         "2": {
           "name": "entity.name.function.gms"

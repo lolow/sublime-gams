@@ -163,7 +163,7 @@
 		<key>equationdef</key>
 		<dict>
 			<key>begin</key>
-			<string>^(^|;)\s*\b(.*)(\.\.)\s+</string>
+			<string>;\s*(.*)(\.\.)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
