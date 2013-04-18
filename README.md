@@ -35,7 +35,7 @@ You need _gams_ or _gams.exe_ in your PATH. Please update your environment varia
 
 To launch gams, open your _file.gms_ and type **CTRL+B** (Build).
 
-Type **ALT+L** to switch between the code _file.gms_ and the listing _file.lst_.
+Type **CTRL+SHIFT+G** to switch between the code _file.gms_ and the listing _file.lst_.
 
 In the GAMS listing, _file.lst_, type **CTRL+R** (Goto Symbol) to list and jump to the error statements.
 
