@@ -1,4 +1,4 @@
-# GAMS package for Sublime Text 2
+# GAMS package for Sublime Text 2 and 3
 
 Provides syntax highlighting for `.gms` and `.inc` files and shortcuts for running GAMS models.
 
@@ -17,9 +17,9 @@ The "Packages" directory is located at:
 * OS X:
     `~/Library/Application Support/Sublime Text 2/Packages/`
 * Linux:
-    `~/.Sublime Text 2/Packages/`
+    `~/.Sublime Text {2,3}/Packages/`
 * Windows:
-    `%APPDATA%/Sublime Text 2/Packages/`
+    `%APPDATA%/Sublime Text {2,3}/Packages/`
 
 You can access it through the menu in `Preferences` > `Browse Packages...`
 
