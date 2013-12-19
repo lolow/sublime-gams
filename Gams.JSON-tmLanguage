@@ -38,8 +38,8 @@
     },
     "blockcomment": {
       "name": "keyword.control.gms",
-      "begin": "(?i)\\$ONTEXT",
-      "end": "(?i)\\$OFFTEXT",
+      "begin": "^\\$ONTEXT",
+      "end": "^\\$OFFTEXT",
       "contentName": "comment.block.documentation.gms"      
     },
     "blockcommentc": {
