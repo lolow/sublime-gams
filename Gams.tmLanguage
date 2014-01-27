@@ -72,11 +72,11 @@
 		<key>blockcomment</key>
 		<dict>
 			<key>begin</key>
-			<string>^\$[Oo][Nn][Tt][Ee][Xx][Tt]</string>
+			<string>(?i)^\$ONTEXT</string>
 			<key>contentName</key>
 			<string>comment.block.documentation.gms</string>
 			<key>end</key>
-			<string>^\$[Oo][Ff][Ff][Tt][Ee][Xx][Tt]</string>
+			<string>(?i)^\$OFFTEXT</string>
 			<key>name</key>
 			<string>keyword.control.gms</string>
 		</dict>
