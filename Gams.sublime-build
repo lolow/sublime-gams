@@ -2,8 +2,9 @@
 	"selector": "source.gms",
 	"windows":
 		{
-			"path": "C:\\GAMS\\win64\\23.8;$PATH",
-			"cmd": ["gams.exe", "$file","lo=3","ERRMSG=1"],
+			"path": "C:\\GAMS\\win64\\24.1;$PATH",
+//			"cmd": ["gams.exe", "$file","lo=3","ERRMSG=1"],
+			"cmd": ["cmd", "/K", "start", "/B", "/low", "gams.exe", "$file","lo=3","ERRMSG=1"],
 			"file_regex": "^(...*?):([0-9]*):?([0-9]*)"
 		},
 	"osx":
