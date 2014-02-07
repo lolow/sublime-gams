@@ -17,7 +17,9 @@
 		{
 			// Launch GAMS through the console with explicit error message in the listing
 			"cmd": ["gams.exe", "$file","lo=3","ERRMSG=1"],
-			// Launch GAMS in low priority
+			// Launch GAMS in an external terminal
+			// "cmd": ["cmd", "/K", "start", "gams.exe", "$file","lo=3","ERRMSG=1"]
+			// Launch GAMS in low priority in an external terminal
 			// "cmd": ["cmd", "/K", "start", "/B", "/low", "gams.exe", "$file","lo=3","ERRMSG=1"]
 		}
 
