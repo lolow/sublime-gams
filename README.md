@@ -55,6 +55,12 @@ you need to add in your code some of these commands:
 	$inlinecom {}
 	$inlinecom /* */
 
+## GAMS Custom launcher
+
+You can create a custom GAMS call ("Build" in Sublime Text). Go to Preferences > Packages Settings > GAMS > Build Custom. It creates a file in **User**, called 'Gams Custom.sublime-build'. Copy the content of the default build file (Preferences > Packages Settings > GAMS > Build Custom) and modify the content according to your needs. Some examples are given in comment.
+
+To use it, you need now to select Tools > Build System > Gams Custom in order to use it. Note that you can create several build files for your different needs.
+
 ## Support
 
 Any remarks, suggestion about the syntax highlighting have to be adressed to the author `Laurent Drouet`.
