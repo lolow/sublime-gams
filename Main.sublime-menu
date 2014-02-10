@@ -26,7 +26,7 @@
                                     "file": "${packages}/User/Gams Custom.sublime-build"
                                 },
                                 "caption": "Build – Custom"
-                            },
+                            }
                         ]
                     }
                 ]
