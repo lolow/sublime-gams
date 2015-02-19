@@ -6,11 +6,13 @@ Provides syntax highlighting for `.gms` and `.inc` files and shortcuts for runni
 
 **Using Sublime Package Control** (recommended): If you have installed [Sublime Package Control](http://wbond.net/sublime_packages/package_control), you can easily install the GAMS Language package via the `Package Control: Install Package` menu item (shortcut: **CTRL+SHIFT+P**). Search for `GAMS Language` in the list.
 
-**Without Git:** Download the latest source zip from [github](https://github.com/lolow/sublime-gams/tarball/master) and extract the files to your Sublime Text "Packages" directory, into a new directory named *GAMS*.
+**Without Git:** Download the latest source zip from [github](https://github.com/lolow/sublime-gams/tarball/master) and extract the files to your Sublime Text "Packages" directory, into a new directory named *GAMS language*.
 
 **With Git:** Clone the repository in your Sublime Text "Packages" directory:
 
-    git clone git://github.com/lolow/sublime-gams.git GAMS
+    git clone git://github.com/lolow/sublime-gams.git "GAMS language"
+
+It is necessary to rename the directory as "GAMS language"
 
 The "Packages" directory is located at:
 

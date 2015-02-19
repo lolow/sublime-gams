@@ -16,7 +16,7 @@
                             {
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/sublime-gams/Gams.sublime-build"
+                                    "file": "${packages}/GAMS language/Gams.sublime-build"
                                 },
                                 "caption": "Build – Default"
                             },
